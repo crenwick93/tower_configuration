@@ -15,7 +15,7 @@
     tower_oauthtoken:               "{{ tower_oauthtoken | default(omit) }}"
     tower_host:                     "{{ tower_hostname }}"
     tower_config_file:              "{{ tower_config_file | default(omit) }}"
-    validate_certs:                 "{{ tower_validate_certs | default('true') }}"
+    validate_certs:                 "{{ tower_validate_certs | default('false') }}"
   no_log: "{{ tower_configuration_license_secure_logging }}"
   when: tower_license is defined
 ...
